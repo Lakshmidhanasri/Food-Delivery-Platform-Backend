@@ -6,6 +6,7 @@ npm
 npm start
 The server will start at http://localhost:3000.
 
+
 API Endpoints
 # User Management
 Register User

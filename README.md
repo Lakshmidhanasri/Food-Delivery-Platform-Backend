@@ -2,12 +2,12 @@
 Install dependencies: Ensure you have Node.js and MongoDB installed.
 npm 
 
-Running the Application
+# Running the Application
 npm start
 The server will start at http://localhost:3000.
 
 API Endpoints
-User Management
+# User Management
 Register User
 POST /api/users/register
 Body:
@@ -17,7 +17,7 @@ Body:
   "password": "password123"
 }
 
-Login User
+# Login User
 POST /api/users/login
 Body:
 {
@@ -28,12 +28,12 @@ Body:
 Get Profile (Requires JWT)
 GET /api/users/profile
 
-Update Profile (Requires JWT)
+# Update Profile (Requires JWT)
 PUT /api/users/profile
 
 
-Restaurant Management
-Create a Restaurant
+# Restaurant Management
+# Create a Restaurant
 POST /api/restaurants
 Body:
 {
@@ -41,7 +41,7 @@ Body:
   "location": "New York"
 }
 
-Update Restaurant
+# Update Restaurant
 PUT /api/restaurants/:restaurantId
 Body:
 {
@@ -49,7 +49,7 @@ Body:
   "location": "Los Angeles"
 }
 
-Add Menu Item
+# Add Menu Item
 POST /api/restaurants/:restaurantId/menu
 Body:
 {
@@ -58,7 +58,7 @@ Body:
   "price": 12.99
 }
 
-Update Menu Item
+# Update Menu Item
 PUT /api/restaurants/:restaurantId/menu/:itemId
 Body:
 {
@@ -66,7 +66,7 @@ Body:
   "price": 11.99
 }
 
-Order Management
+ # Order Management
 Place an Order
 POST /api/orders
 Body:
@@ -78,7 +78,7 @@ Body:
   "deliveryAddress": "123 Main St"
 }
 
-Get Order Details
+# Get Order Details
 GET /api/orders/:orderId
 
 Update Order Status (For admins only)
@@ -87,13 +87,13 @@ Body:
 {
   "status": "Delivered"
 }
-Track an Order
+# Track an Order
 GET /api/orders/:orderId/track
 
 Real-Time Order Tracking
 Connect to the WebSocket server to receive real-time order updates like "In Progress," "Out for Delivery," or "Delivered."
 
-Authentication
+# Authentication
 All endpoints that require authentication (e.g., updating profile, placing orders) must include a JWT token in the Authorization header.
 Example:
 Authorization: Bearer <your_jwt_token>
@@ -102,7 +102,7 @@ Real-Time Features
 This project uses WebSockets (via socket.io) to provide real-time order tracking. After placing an order, users can receive real-time updates about their order status.
 
 
-Setup Instructions
+# Setup Instructions
 Install the dependencies using npm install
 Configure the environment variables in the .env file
 Start the server using npm start
